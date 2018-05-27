@@ -1,0 +1,6 @@
+struct Sales_data
+{
+        std::string bookNo;
+        unsigned int unitSold;
+        unsigned double revenue;
+};
