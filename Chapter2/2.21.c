@@ -1,8 +1,9 @@
 int main()
 {
-        int i = 42;             //      初始化i为42
-        int *p1 = &i;           //      初始化p1为i的地址
-        *p1 = *p1 * *p1;        //      将p1所指对象，即i的值赋值为42*42
- 
+        int i = 0;
+//      double *dp = &i;        不同类型的指针之间不能赋值
+//      int *ip = i;            指针的值不能为int       
+        int *p = &i;
+
         return 0;
 }
