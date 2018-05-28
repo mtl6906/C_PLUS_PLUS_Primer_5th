@@ -1,0 +1,9 @@
+unsigned buf_size = 1024;
+//      int ia[buf_size];       error
+        int ia[4*7-14];
+//      int ia[text_size()];    error
+//      char st[11] = "fundamental";    error
+int main()
+{
+        return 0;
+}
