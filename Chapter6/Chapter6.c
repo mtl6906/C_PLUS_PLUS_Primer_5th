@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Chapter6.h"
 
 using std::cin;
 
