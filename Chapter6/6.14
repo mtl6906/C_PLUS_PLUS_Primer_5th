@@ -1,0 +1,13 @@
+//      可以用引用
+void swap(int &v1,int &v2)
+{
+        int t = v1;
+        v1 = v2;
+        v2 = t;
+}
+//      不能用引用
+void add(string a,string b)
+{
+        a = a + b;
+        return a;
+}
