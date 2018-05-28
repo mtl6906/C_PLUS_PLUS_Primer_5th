@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+
+int main()
+{
+        vector<int> iv1(10,42); //这种最好，代码最少
+
+        vector<int> iv2{42,42,42,42,42,42,42,42,42,42};
+
+        vector<int> iv3 = {42,42,42,42,42,42,42,42,42,42};
+
+        return 0;
+}
