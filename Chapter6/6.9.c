@@ -1,3 +1,4 @@
+//g++ -o 6.9 6.9.c Chapter6.c
 #include <iostream>
 #include "Chapter6.h"
 
