@@ -1,8 +1,10 @@
 #include <iostream>
+#include <vector>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::vector;
 
 int main()
 {
@@ -15,8 +17,8 @@ int main()
 
 //      vector
         vector<int> iv1(10),iv2;
-        for(auto i=iv.begin();i!=iv.end();i++)
-                *i = i - iv.begin();
+        for(auto i=iv1.begin();i!=iv1.end();i++)
+                *i = i - iv1.begin();
 
         iv2 = iv1;
 
