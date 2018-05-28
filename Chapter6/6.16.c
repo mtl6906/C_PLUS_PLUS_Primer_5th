@@ -20,4 +20,5 @@ int main()
         else
                 cout << "no" << endl;
 
+        return 0;
 }
