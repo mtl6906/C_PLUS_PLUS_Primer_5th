@@ -1,0 +1,1 @@
+左结合律        (score > 90 ? "high score" : (score < 60)) ? "fail" : "pass";
