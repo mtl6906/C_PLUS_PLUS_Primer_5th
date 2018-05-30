@@ -1,0 +1,25 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+//      void print(const int ia[10])    数组大小不确定
+void print(const int (&ia)[10])
+{
+        for(size_t i=0;i!=10;++i)
+                cout << ia[i] << endl;
+
+}
+
+int main()
+{
+        int a[10] = {0};
+
+        int b[2] = {0};
+
+        print(a);
+
+//      print(b);       error
+
+        return 0;
+}
