@@ -1,27 +1,33 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 
 using std::string;
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 
-int main(void)
+int main()
 {
-        int cnt;
-        string text;
+        int cnt[8] = {0};
+        char ch[8] = {'a','e','i','o','u',' ','\t','\n'};
 
-        getline(cin,text);
+        char c;
 
-        for(auto c : text)
+        while(cin.get(c))
         {
                 c = tolower(c);
-                if(c == 'a' || c == 'e' || c == 'i' || c == 'u' || c == 'o')
-                        cnt++;
+                for(int i=0;i<8;i++)
+                {
+                        if(ch[i] == c)
+                        {
+                                cnt[i]++;
+                                break;
+                        }
+                }
         }
 
-        cout << cnt << endl;
+        for(int i=0;i<8;i++)
+                cout << ch[i] << " : " << cnt[i] << endl;
 
         return 0;
 }
