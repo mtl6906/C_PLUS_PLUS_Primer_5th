@@ -8,16 +8,25 @@ using std::endl;
 
 int main()
 {
-        int cnt = 0;
+        int cnt[5] = {0};
+        char ch[5] = {'a','e','i','o','u'};
+
         string text;
 
         cin >> text;
 
         for(const auto &c : text)
-                if(c == 'a'|| c == 'e' || c == 'i' || c == 'o' || c == 'u')
-                        cnt++;
+                for(int i=0;i<5;i++)
+                {
+                        if(ch[i] == c)
+                        {
+                                cnt[i]++;
+                                break;
+                        }
+                }
 
-        cout << cnt << endl;
+        for(int i=0;i<5;i++)
+                cout << ch[i] << " " << cnt[i] << endl;
 
         return 0;
 }
