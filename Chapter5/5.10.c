@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 
 using std::string;
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 
-int main(void)
+int main()
 {
-        int cnt;
+        int cnt[5] = {0};
+        char ch[5] = {'a','e','i','o','u'};
+
         string text;
 
         cin >> text;
@@ -17,11 +18,17 @@ int main(void)
         for(auto c : text)
         {
                 c = tolower(c);
-                if(c == 'a' || c == 'e' || c == 'i' || c == 'u' || c == 'o')
-                        cnt++;
+                for(int i=0;i<5;i++)
+                {
+                        if(ch[i] == c)
+                        {
+                                cnt[i]++;
+                                break;
+                        }
+                }
         }
-
-        cout << cnt << endl;
+        for(int i=0;i<5;i++)
+                cout << ch[i] << " " << cnt[i] << endl;
 
         return 0;
 }
