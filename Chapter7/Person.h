@@ -8,7 +8,9 @@ struct Person
         std::string address;
         std::string getName()const;
         std::string getAddress()const;
-        std::istream& read(std::istream &,Person &);
-        std::ostream& print(std::ostream &,const Person &);
 };
+
+std::istream& read(std::istream &,Person &);
+std::ostream& print(std::ostream &,const Person &);
 #endif
+
