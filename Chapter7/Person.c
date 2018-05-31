@@ -13,10 +13,10 @@ std::string Person::getAddress() const
 
 std::istream& read(std::istream &is,Person &o)
 {
-        return is >> name >> address;
+        return is >> o.name >> o.address;
 }
 
 std::ostream& print(std::ostream &os,const Person &o)
 {
-        return os << "name: " << name << ",address: " << address << std::endl;
+        return os << "name: " << o.name << ",address: " << o.address << std::endl;
 }
