@@ -14,5 +14,5 @@ struct Sales_data
 
 Sales_data add(const Sales_data&,const Sales_data&);
 std::istream &read(std::istream &,Sales_data &);
-std::ostream &print(std::ostream &,Sales_data &);
+std::ostream &print(std::ostream &,const Sales_data &);
 #endif
