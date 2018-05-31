@@ -8,6 +8,10 @@ struct Sales_data
         std::string bookNo;
         unsigned int units_sold = 0;
         double revenue = 0.0;
+        Sales_data() = default;
+        Sales_data(const std::string &);
+        Sales_data(const std::string &,unsigned,double) ;
+        Sales_data(std::istream &);
         std::string isbn()const;
         Sales_data& combine(const Sales_data &);
 };
