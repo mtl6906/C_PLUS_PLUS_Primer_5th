@@ -26,7 +26,7 @@ std::istream& read(std::istream &is,Sales_data &o)
         return is;
 }
 
-std::ostream& print(std::ostream &os,Sales_data &o)
+std::ostream& print(std::ostream &os,const Sales_data &o)
 {
         os << "isbn: " << o.bookNo << ",units_sold: " << o.units_sold << ",revenue: " << o.revenue << std::endl;
         return os;
