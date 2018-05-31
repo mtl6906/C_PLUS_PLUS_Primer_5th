@@ -1,5 +1,22 @@
 #include "Sales_data.h"
 
+Sales_data::Sales_data(const std::string &s)
+{
+        bookNo = s;
+}
+
+Sales_data::Sales_data(const std::string &s,unsigned n,double p)
+{
+        bookNo = s;
+        units_sold = n;
+        revenue = p;
+}
+
+Sales_data::Sales_data(std::istream& is)
+{
+        is >> bookNo >> units_sold >> revenue;
+}
+
 std::string Sales_data::isbn()const
 {
         return bookNo;
