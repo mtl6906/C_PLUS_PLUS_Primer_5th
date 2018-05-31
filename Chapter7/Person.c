@@ -1,13 +1,21 @@
 #include "Person.h"
 
-using std::string;
-
-string Person::getName() const
+std::string Person::getName() const
 {
         return name;
 }
 
-string Person::getAddress() const
+std::string Person::getAddress() const
 {
         return address;
+}
+
+std::istream& Person::read(std::istream &is,Person &o)
+{
+        return is >> name >> address;
+}
+
+std::ostream& Person::print(std::ostream &os,const Person &o)
+{
+        return os << "name: " << name << ",address: " << address << std::endl;
 }
