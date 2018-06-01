@@ -12,11 +12,6 @@ Sales_data::Sales_data(const std::string &s,unsigned n,double p)
         revenue = p;
 }
 
-Sales_data::Sales_data(std::istream& is)
-{
-        is >> bookNo >> units_sold >> revenue;
-}
-
 std::string Sales_data::isbn()const
 {
         return bookNo;
