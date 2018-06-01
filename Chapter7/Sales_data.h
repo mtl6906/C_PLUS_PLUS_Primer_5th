@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 
+
 struct Sales_data
 {
         std::string bookNo;
@@ -10,8 +11,8 @@ struct Sales_data
         double revenue = 0.0;
         Sales_data() = default;
         Sales_data(const std::string &);
-        Sales_data(const std::string &,unsigned,double) ;
-        Sales_data(std::istream &);
+        Sales_data(const std::string &,unsigned,double);
+        Sales_data(std::istream &is){std::cin >> bookNo >> units_sold >> revenue;}
         std::string isbn()const;
         Sales_data& combine(const Sales_data &);
 };
