@@ -31,13 +31,3 @@ Sales_data add(const Sales_data& o1,const Sales_data& o2)
         sum.units_sold += o2.units_sold;
         return sum;
 }
-
-std::istream& read(std::istream &is,Sales_data &o)
-{
-        return is >> o.bookNo >> o.units_sold >> o.revenue;
-}
-
-std::ostream& print(std::ostream &os,const Sales_data &o)
-{
-        return os << "isbn: " << o.bookNo << ",units_sold: " << o.units_sold << ",revenue: " << o.revenue << std::endl;
-}
