@@ -2,8 +2,10 @@
 #define SCREEN_H
 #include <string>
 #include <iostream>
+
 class Screen
 {
+	friend void Window_mgr::clear(Window_mgr::ScreenIndex);
 	public:
 		typedef std::string::size_type pos;
 		Screen() = default;
@@ -16,6 +18,7 @@ class Screen
 		Screen &set(pos,pos,char);
 		Screen &display(std::ostream&);
 		const Screen &display(std::ostream&)const;
+		pos size() const;
 	private:
 		pos height = 0,width = 0;	
 		pos cursor = 0;		
@@ -65,5 +68,10 @@ inline const Screen& Screen::display(std::ostream &os) const
 {
 	do_display(os);
 	return *this;
+}
+
+inline Screen::pos Screen::size() const
+{
+	return height * width;
 }
 #endif
