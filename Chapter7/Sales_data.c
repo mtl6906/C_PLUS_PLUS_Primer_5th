@@ -5,17 +5,6 @@ inline double Sales_data::avg_price()
         return revenue / units_sold;
 }
 
-Sales_data::Sales_data(const std::string &s)
-{
-        bookNo = s;
-}
-
-Sales_data::Sales_data(const std::string &s,unsigned n,double p)
-{
-        bookNo = s;
-        units_sold = n;
-        revenue = p;
-}
 
 std::string Sales_data::isbn()const
 {
@@ -39,7 +28,7 @@ Sales_data add(const Sales_data& o1,const Sales_data& o2)
 
 std::istream& read(std::istream &is,Sales_data &o)
 {
-        return is >> o.bookNo >> o.units_sold >> o.revenue;
+        is >> o.bookNo >> o.units_sold >> o.revenue;
 }
 
 std::ostream& print(std::ostream &os,const Sales_data &o)
