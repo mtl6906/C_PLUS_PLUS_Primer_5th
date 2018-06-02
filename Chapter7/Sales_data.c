@@ -1,6 +1,6 @@
 #include "Sales_data.h"
 
-inline double avg_price()
+inline double Sales_data::avg_price()
 {
         return revenue / units_sold;
 }
