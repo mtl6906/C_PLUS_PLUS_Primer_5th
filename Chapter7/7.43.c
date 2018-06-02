@@ -9,7 +9,7 @@ class Nodefault
 class C
 {
         public:
-                C(int data) : nd(data){}
+                C() : nd(0){}
         private:
                 Nodefault nd;
 };
