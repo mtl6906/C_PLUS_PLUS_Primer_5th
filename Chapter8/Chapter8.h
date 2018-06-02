@@ -3,7 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <fstream>
 
-std::istream& read(std::istream&);
+std::istream &read(std::istream&);
+void read(const std::string&,std::vector<std::string>&);
 
 #endif
