@@ -4,8 +4,8 @@
 class Car
 {
         public:
-                Car() = default;
-                Car(istream& is){is >> id >> color >> model >> owner};
+                Car() : Car("","","",""){}
+                Car(istream& is):Car(){is >> id >> color >> model >> owner};
                 Car(std::string id,std::string color,std::string model,std::string owner) : id(id),color(color),model(model),owner(owner){};
         private:
                 std::string id;
@@ -13,5 +13,5 @@ class Car
                 std::string model;
                 std::string owner;
 };
-
+        
 #endif
