@@ -16,10 +16,10 @@ struct Sales_data
                 double revenue = 0.0;
                 double avg_price();
         public:
-                Sales_data() = default;
+//              Sales_data() = default;
                 Sales_data(const std::string &);
                 Sales_data(const std::string &,unsigned,double);
-                Sales_data(std::istream &is){std::cin >> bookNo >> units_sold >> revenue;}
+                Sales_data(std::istream &is=std::cin){is >> bookNo >> units_sold >> revenue;}
                 std::string isbn()const;
                 Sales_data& combine(const Sales_data &);
 };
