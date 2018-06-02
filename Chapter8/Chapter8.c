@@ -23,3 +23,14 @@ void read(const std::string &filename,std::vector<std::string> &sv)
                 sv.push_back(line);
         }
 }
+
+void read(const std::string &filename,std::vector<std::strng> &sv)
+{
+        std::string word;
+        std::ifstream ifs(filename);
+
+        while(ifs >> word)
+        {
+                sv.push_back(line);
+        }
+}
