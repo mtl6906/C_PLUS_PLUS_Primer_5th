@@ -17,7 +17,7 @@ struct Sales_data
                 double avg_price();
         public:
 //              Sales_data() = default;
-                Sales_data(const std::string &bookNo) : Sales_data(bookNo,0,0.0)
+                explicit Sales_data(const std::string &bookNo) : Sales_data(bookNo,0,0.0)
                 {
         //              std::cout << "1 value" << std::endl;
                 }
@@ -30,6 +30,7 @@ struct Sales_data
                         is >> bookNo >> units_sold >> revenue;
         //              std::cout << "no value" << std::endl;
                 }
+
                 std::string isbn()const;
                 Sales_data& combine(const Sales_data &);
 };
