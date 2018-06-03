@@ -1,0 +1,7 @@
+iter会失效，将
+
+        iv.insert(iter,2*some_val);
+
+改为
+
+        iter = iv.insert(iter,2*some_val);
