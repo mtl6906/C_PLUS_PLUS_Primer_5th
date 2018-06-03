@@ -20,7 +20,12 @@ int main()
 {
         vector<int> a = {1,2,3,4,5};
 
-        cout << *search(a.begin(),a.end(),3) << endl;
+        vector<int>::iterator it = search(a.begin(),a.end(),3);
+
+        if(it != a.end())
+                cout << *it << endl;
+        else
+                cout << "not found..." << endl;
 
         return 0;
 }
