@@ -1,0 +1,5 @@
+vector<int> v1;
+const vector<int> v2;
+
+auto it = v1.begin(),it2 = v2.begin();  //      vector<int>::iterator   vector<int>::const_iterator
+auto it = v1.begin(),it2 = v2.begin();  //      vector<int>::const_iterator     vector<int>::const iterator
