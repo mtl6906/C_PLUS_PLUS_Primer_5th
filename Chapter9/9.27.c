@@ -1,31 +1,36 @@
-#include <forward_list>
 #include <iostream>
+#include <forward_list>
 
 using std::forward_list;
 using std::cout;
 using std::endl;
+using std::string;
+
+void insert(forward_list<string> &sfl,const string &des,const string &val)
+{
+        auto s = sfl.begin();
+        auto prev = sfl.before_begin();
+        while(s != sfl.end())
+        {
+                if(*s == des)
+                {
+                        sfl.insert_after(s,val);
+                        return;
+                }
+                ++prev;
+                ++s;
+        }
+        sfl.insert_after(prev,val);
+}
 
 int main()
 {
-        forward_list<int> ifl = {1,2,3,4,5,6};
+        forward_list<string> sfl = {"a","b","c","d"};
 
-        auto prev = ifl.before_begin(),cur = ifl.begin();
+        insert(sfl,"w","e");
 
-        while(cur != ifl.end())
-        {
-                if(*cur % 2)
-                {
-                        cur = ifl.erase_after(prev);
-                }
-                else
-                {
-                        prev = cur;
-                        ++cur;
-                }
-        }
-
-        for(const auto& i : ifl)
-                cout << i << endl;
+        for(const auto& s : sfl)
+                cout << s << endl;
 
         return 0;
 }
