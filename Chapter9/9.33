@@ -1,1 +1,24 @@
-会报错，因为插入后新元素之后的迭代器都失效了。
+//会报错，因为插入后新元素之后的迭代器都失效了。
+#include <iostream>
+#include <vector>
+
+using std::vector;
+using std::cout;
+using std::endl;
+
+int main()
+{
+        vector<int> iv = {1,2,3,4,5};
+
+        auto begin = iv.begin();
+
+        while(begin != iv.end())
+        {
+                ++begin;
+//              begin = 
+                iv.insert(begin,42);
+                ++begin;
+        }
+
+        return 0;
+}
