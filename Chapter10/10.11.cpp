@@ -9,9 +9,12 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-void elimDups(vector<string> words)
+void elimDups(vector<string> &words)
 {
         sort(words.begin(),words.end());
+        for(const auto& c : words)
+                cout << c << " ";
+        cout << endl;
         words.erase(unique(words.begin(),words.end()),words.end());
 }
 
