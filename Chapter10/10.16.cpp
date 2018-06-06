@@ -14,7 +14,7 @@ string make_plural(int count,const string &word,const string &s)
         return count > 1 ? word + s : word;
 }
 
-void elimDups(vector<string> words)
+void elimDups(vector<string> &words)
 {
         sort(words.begin(),words.end());
         for(const auto& c : words)
