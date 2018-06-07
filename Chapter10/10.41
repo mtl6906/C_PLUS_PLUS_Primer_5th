@@ -1,0 +1,7 @@
+replace:        将给定范围内，值为old_val的元素的值替换为new_val
+
+replace_if:     将给定范围内，满足谓词的元素的值替换为new_val
+
+replace_copy:   将给定范围内，值为old_val的元素的值替换为new_val，然后拷贝到dest中
+
+replace_copy_if:将给定范围内，满足谓词的元素的值替换为new_val,然后拷贝到dest中。
