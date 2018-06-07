@@ -13,7 +13,9 @@ using std::ostream_iterator;
 int main()
 {
         istream_iterator<int> iter(cin),eof;
-        vector<int> iv(iter,eof);
+        vector<int> iv;
+
+        copy(iter,eof,back_inserter(iv));
 
         sort(iv.begin(),iv.end());
 
