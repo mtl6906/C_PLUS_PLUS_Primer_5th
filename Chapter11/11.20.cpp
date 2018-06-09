@@ -7,7 +7,7 @@ using std::map;
 using std::cout;
 using std::endl;
 using std::string;
-
+//当然前者更易写和易读....
 int main()
 {
         map<string,int> word_count;
