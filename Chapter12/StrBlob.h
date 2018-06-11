@@ -9,6 +9,7 @@
 class StrBlob
 {
         friend class StrBlobPtr;
+        friend class ConstStrBlobPtr;
         public:
                 typedef std::vector<std::string>::size_type size_type;
                 StrBlob() : data(std::make_shared<std::vector<std::string>>()){};
