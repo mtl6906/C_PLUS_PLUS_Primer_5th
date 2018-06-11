@@ -3,10 +3,11 @@
 
 class StrBlob;
 class StrBlobPtr;
+class ConstStrBlobPtr;
 
 #include "StrBlob.h"
+#include "ConstStrBlobPtr.h"
 #include "StrBlobPtr.h"
-
 
 
 #endif
