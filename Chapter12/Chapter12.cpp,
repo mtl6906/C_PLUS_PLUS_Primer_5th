@@ -1,3 +1,4 @@
 #include "Chapter12.h"
 #include "StrBlobPtr.cpp"
+#include "ConstStrBlobPtr.cpp"
 #include "StrBlob.cpp"
