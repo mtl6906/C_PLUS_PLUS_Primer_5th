@@ -23,3 +23,7 @@ void StrBlob::check(size_type i,const std::string &msg) const
         if(i >= data -> size())
                 throw std::out_of_range(msg);
 }
+
+
+StrBlobPtr StrBlob::begin(){return StrBlobPtr(*this);}
+StrBlobPtr StrBlob::end(){auto ret = StrBlobPtr(*this,data -> size());return ret;}
