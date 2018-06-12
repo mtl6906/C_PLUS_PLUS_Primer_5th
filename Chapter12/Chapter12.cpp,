@@ -2,3 +2,5 @@
 #include "StrBlobPtr.cpp"
 #include "ConstStrBlobPtr.cpp"
 #include "StrBlob.cpp"
+#include "QueryResult.cpp"
+#include "TextQuery.cpp"
